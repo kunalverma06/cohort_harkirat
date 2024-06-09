@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zerodha</title>
+</head>
+<body>
+    <div style="display: flex;
+    justify-content: space-between;box-shadow: 2px 1px 2px #eee;">
+        <!-- <img width="120" style="margin-left: 80px; margin-right: 548px;"  src="logo.svg"> -->
+        <!-- we created a div and setted the property to display flex and
+         set to be space between(all the children this div will contain) -->
+        <img width="130" style="padding-left: 80px;height: 17px;padding-top: 18px;"  src="logo.svg">
+        <!-- one is our img and second children is another div so the elements inside that div
+        will not be affected by spaced between -->
+        <div style="display: flex; margin-right: 100px;">
+            <div  style="padding: 20px;color: #666;cursor: pointer;"> Signup </div>
+            <div  style="padding: 20px;color: #666;cursor: pointer;"> About </div>
+            <div  style="padding: 20px;color: #666;cursor: pointer;"> Product </div>
+            <div  style="padding: 20px;color: #666;cursor: pointer;"> Pricing </div>
+            <div  style="padding: 20px;color: #666;cursor: pointer;"> Support  </div>
+        </div>
+        <!-- there are two different ways to position first is givng margin and padding 
+        and second is using the float attribute in the style and third the using 
+        of flex box and its one of the best way to do it  -->
+    </div>
+    
+    <div style="display: flex; justify-content: center;margin-top: 50px;">
+        <img  height="300"  width="700"  src="img.png">
+    </div>
+        
+    <div style="display: flex; justify-content: center;color: #424242;margin-bottom: -20px;">
+        <h1>Invest in everything</h1>
+    </div>
+    <div style="display: flex; justify-content: center;color: #424242;">
+        <h3>Online platform to invest in stocks, derivatives, mutual funds, and more</h3>
+    </div>
+    <div style="display: flex; justify-content: center;">
+        <div style="cursor:pointer;background-color:#387ed1; color:#fff;border: 1px solid rgba(0,0,0,0);    padding: 10px 30px;
+            padding: 10px 30px;font-weight: 550;">sign up now</div >
+    </div>
+</body>
+</html>
+
+
+
+
+
+
+// using multiple flex in code
+<div style="display: flex; justify-content: space-between;">
+    <div>
+        child element
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+        <div>second child becomes parent </div>
+        <div>element1</div>
+        <div>element2</div>
+        <div>element3</div>
+        
+    </div>
+</div>

@@ -1,0 +1,60 @@
+//bash commands
+
+https://www.geeksforgeeks.org/ls-command-in-linux/
+(this is ls commands list for terminal)
+
+
+//(this is for grep command list)
+https://www.geeksforgeeks.org/grep-command-in-unixlinux/
+
+
+// cat command
+// cat command to write and  append a file 
+cat > filename.txt // to write into a file by overwriting 
+cat >> filename.txt // to append something at last
+
+
+
+// mkdir -p usecase
+Use case example: Assume I want to create directories hello/goodbye but none exist:
+
+$mkdir hello/goodbye
+mkdir:cannot create directory 'hello/goodbye': No such file or directory
+$mkdir -p hello/goodbye
+$
+-p created both, hello and goodbye
+
+
+
+
+
+
+
+///////////// MOVE A FILE AND RENAME IT//////////////
+// mv command to rename a file
+mv old_filename new_filename
+mv old_filename /path/to/new_directory/
+
+// if u want to move it and rename it at the same time
+mv old_filename /path/to/new_directory/new_name 
+
+
+//copy the file 
+cp source_file destination_file
+
+// same usecase of -p from above mkdir
+cp -r source_file destination_file
+
+
+
+
+
+
+
+
+
+// Delete a file
+rm filename.txt
+
+// Delete a folder and its contents
+rm -r foldername
