@@ -1,0 +1,7 @@
+name = "my-app"
+compatibility_date = "2025-06-06"
+main = "src/index.ts"
+
+[vars]
+
+DATABASE_URL="postgres://accelerate.prisma-data.net/?api_key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhcGlfa2V5IjoiMDFKWkFRNVZLWTlIUjg2RlFOODFTS1lNMDkiLCJ0ZW5hbnRfaWQiOiJkMjQwMGM0YjM0YmM5ZWY4ZDkxY2YyZWViODBkZmIxZjU2Nzc1ODg2ODMzNDg0YjU3MTFjZTQ0NTIzNjM0NmNmIiwiaW50ZXJuYWxfc2VjcmV0IjoiM2MyYzFiNjktMmNjZi00ZTNhLWJiZmEtN2ExY2VmYWRkMzgxIn0.CXCyx5z3n_MORLUXn5FKmYWsIxUmb1_dIyfkiwdQgZE"

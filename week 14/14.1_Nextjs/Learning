@@ -1,0 +1,55 @@
+IN next js , routing works by making folder in app different folders means different route 
+
+layout.tsx is used for the common element which you want all the routes to get displayed on 
+
+you can have layout.tsx in subroutes too , ( in these layout , element is wrapped around the children  )
+
+note : layout.tsx , page.tsx , loadin.tsx ( this should be the name of the file in every route )
+
+if we want to show any banner or layout for sign in and sign up so we need to put that in one folder for eg auth and have layout.tsx  and sign in and sign up 
+
+but the route will be localhost/auth/signin
+if we dont want auth to be a part of the route then we will store it in (auth) while naming the folder        
+
+client and server components :
+by default we have server components in Next js which actually 
+
+
+Server Components :
+No JavaScript sent to the client unless you use interactivity (like useState)
+
+Can directly access databases, file systems, and secrets
+
+Great for performance and SEO
+
+Client Components
+What they are:
+Components rendered in the browser, used for interactivity (like buttons, forms, animations).
+
+Key Features:
+
+Can use React hooks: useState, useEffect, etc.
+
+Runs fully in the browser
+
+You need to declare them explicitly
+
+How to use:
+Add "use client" at the top of the file.
+
+loading.tsx is the loading component which will be shown when the main page.tsx is loading 
+its by default ( LOADERS )
+
+ how to take queryparam , body and header  in Next js 
+
+ export default function Home(req:NextRequest){
+    // body
+    const body = await req.json();
+    //header 
+    const header = req.headers.get("name of the header ")
+    //query param
+    const queryparam = req.nextUrl.searchParams.get(name of query parameter);
+ }
+
+
+

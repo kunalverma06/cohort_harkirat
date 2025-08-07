@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<body>
+
+    <script>
+        // function onclickk(){
+        //     fetch("https://fakerapi.it/api/v1/persons?_locale=fr_FR")
+        //     .then(function(response){
+        //     //    const data= response
+        //     //    console.log(data); We cant do this as our data wont be shown in json format
+        //         response.json()//this also returns  a promise
+        //         .then(function(data){
+        //             console.log(data)
+        //             })
+
+        //     })
+
+        // }
+
+       async function onclickk(){
+        const response =await(fetch("https://fakerapi.it/api/v1/persons?_locale=fr_FR"))
+        const data = await response.json()
+        console.log(data);
+       } //this function is same as above function just the async await is used here
+    </script>
+    <button onclick="onclickk()">click me</button>
+</body>
+</html>

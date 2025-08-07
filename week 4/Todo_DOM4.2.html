@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        //One way to do it (ugly syntax)
+
+        // function addtodo() {
+        //     const title = document.getElementById("todo").value;
+        //     const description = document.getElementById("description").value;
+        //     document.getElementById("adding").innerHTML += `<div>
+        //         <div>${title}</div><br> 
+        //         <div>${description} </div>
+        //         <button>task done</button>
+        //     </div>`;
+        // "we give value of title and description to the div with ${}Those
+        //  "slanted" quotation marks are often called backticks. 
+        // This type of string is called a "template string 
+        //}
+
+        let buttonid = 0;
+        function done(buttonid){
+            const outerdiv=document.getElementById(buttonid);
+            outerdiv.children[2].innerHTML="task done";
+
+        }
+
+        function addchild(title, description,buttonid) {
+            const outerdiv = document.createElement("div");//create a div
+            const titlediv = document.createElement("div");//create a  inner div title
+            titlediv.innerHTML = title;//give value of title to the inner div title
+
+            const descriptiondiv = document.createElement("div");//creating a inner div descripiton
+            descriptiondiv.innerHTML = description;//give value of description to the inner div description
+
+            const button = document.createElement("button");//creating a button
+            button.innerHTML = "mark as done";//give value to the button
+
+            button.setAttribute("onclick", `done(${buttonid})`);//set attribute to the button
+                             //on click  //call the function done with the buttonid
+
+            outerdiv.appendChild(titlediv);//append the inner div title to the outer div
+            outerdiv.appendChild(descriptiondiv);//append the inner div description to the outer div
+            outerdiv.appendChild(button);//append the button to the outer div
+            outerdiv.setAttribute("id", buttonid);//set attribute to the outer div
+            return (outerdiv);
+        }
+
+        function addtodo() {
+            const title = document.getElementById("todo").value;
+            const description = document.getElementById("description").value;
+            document.getElementById("adding").appendChild(addchild(title, description,buttonid++));
+
+
+
+
+        } 
+    </script>
+</head>
+
+<body>
+    <input id="todo" placeholder="title" type="text"></input><br><br>
+    <input id="description" placeholder="description" type="text"></input><br><br>
+    <button onclick="addtodo()">Add tasks</button>
+    <div id="adding"></div>
+</body>
+
+</html>

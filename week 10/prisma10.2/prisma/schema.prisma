@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = "postgresql://postgres:12345678@localhost:5432/postgres"
+}
+
+// model User {
+//   id        Int   @id @default(autoincrement())
+//   email     String   @unique
+//   name      String?
+  
+// }
+
+model User {
+  id       Int   @id @default(autoincrement())
+  username String
+  password String
+  firstName String?
+  lastName String?
+}
+//now we will use these models in typescript code to interact with the database
+
+model Todo {
+  id        Int   @id @default(autoincrement())
+  title     String
+  done      Boolean
+  description String?
+  userId    Int?
+}
+
+//npx prisma migrate dev --name Initialize the schema   
+ //  (--name Nameofmigration )
+
+//this will create a new migration file in the migrations folder and run the migration which will make the changes to the database schema.
+
+//what is a migration? it is a way to make changes to the database schema without losing the data that is already in the database. all of the queries that are run in the migration file are stored in the database so that they can be run again if needed.
+
+
+//npx prisma generate 
+//this will generate the prisma client which is a typescript client that we can use to interact with the database. it will be generated in the node_modules/.prisma/client folder.

@@ -1,0 +1,6 @@
+when you are using cloud you should not use local database
+
+Connection pool is required as the machines which run your code are running are not one but multiples so they  shouldnot directly access to the database , so we use connection pool
+
+When you are using cloud , avoid as much global variable (outside the function/ route) cuz one fucntion is running on one machine so you might loose the access of the global variables 
+
